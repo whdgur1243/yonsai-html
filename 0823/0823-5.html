@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        div { border : 1px solid gray; }
+        #section { width: 70%;float: left; }
+        #aside { width: 30%;float: left; }
+        .clearfix { content:"";clear:both;display:table; }
+    </style>
+
+</head>
+<body>
+    <!-- 1. float는 주변요소를 감싸진다. -->
+    <!-- 2. clear로 float를 해제 -->
+    <div id="header">h</div>
+    <div id="nevigation">
+            <ul>
+                <li>홈</li>
+                <li>자기소개</li>
+                <li>친구목록</li>
+            </ul>
+            홈 자기소개 친구목록
+
+    </div>
+    <div id="content">
+        <div id="section">
+            <ul>
+                <li>class는 여러요소에 스타일을 지정</li>
+                <li>id는 문서애 하나의 요소만 지정 - 자바스크립트에 사용됨.</li>
+            </ul>
+        </div>
+
+        <div id="aside">a</div>
+
+    </div>    
+    <div id="footer">f</div>
+    <div class="clearfix"></div>
+</body>
+</html>

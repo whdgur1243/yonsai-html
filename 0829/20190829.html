@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>네이버 회원가입페이지</title>
+    <style>
+        /* ******** */
+        /* 공통설정 */
+        body { background: #f5f6f7; }
+        body, button, input, select, table, textarea {
+            font-family: Dotum,'돋움',Helvetica,sans-serif;
+            font-size: 12px;
+        }
+        /* ******** */
+        /* 헤더영역 */
+        header { width: 241px; margin-left: auto; margin-right: auto; padding: 46px 0 20px 0; }
+        /* 부모를 header로 가지고 있는 div 요소 */
+        header > div { 
+            background-image: url("/img/naver_logo.png"); 
+            width: 241px; height: 47px;
+        }
+        /* *********** */
+        /* 꼬릿말 영역 */
+        footer {padding: 30px 0 15px 0; }
+        footer div { margin: 0 0 9px 0; }
+        footer div, footer address { text-align: center; }
+        footer a { text-decoration: none; color: #333; }
+        footer a:hover { text-decoration: underline; color: #438A01; }
+        footer .lightgray { color: lightgray; }
+        footer address { font-style: normal; font-family: Arial,Helvetica,sans-serif; }
+    </style>
+</head>
+<body>
+    <header>
+        <div></div>
+    </header>
+    <div class="contents">
+        <section>회원가입 양식</section>
+    </div>
+    <footer>
+        <div>
+            <a href="">이용약관</a>
+            <span class="lightgray">|</span>
+            <!-- strong은 의미적으로 중요하다는 것을 내포하고 있음. -->
+            <strong><a href="">개인정보처리방침</a></strong>
+            <!-- <b><a href="">개인정보처리방침</a></b> -->
+            <span class="lightgray">|</span>
+            <a href="">책임의 한계와 법적고지</a>
+            <span class="lightgray">|</span>
+            <a href="">회원정보</a>
+            <span class="lightgray">|</span>
+            <a href="">고객센터</a>
+        </div>
+        <address>
+            <em>@</em>
+            <span><a href="https://naver.com">NAVER Corp.</a></span>
+        </address>
+    </footer>
+</body>
+</html>

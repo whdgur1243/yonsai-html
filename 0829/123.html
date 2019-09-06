@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>네이버 회원가입페이지</title>
+    <style>
+        /* ******** */
+        /* 공통설정 */
+        body { background: #f5f6f7; }
+        body, button, input, select, table, textarea {
+            font-family: Dotum,'돋움',Helvetica,sans-serif;
+            font-size: 12px;
+        }
+        /* ******** */
+        /* 헤더영역 */
+        header { width: 241px; margin-left: auto; margin-right: auto; padding: 46px 0 20px 0; }
+        /* 부모를 header로 가지고 있는 div 요소 */
+        header > div { 
+            background-image: url("/img/naver_logo.png"); 
+            width: 241px; height: 47px;
+        }
+        /* ************* */
+        /* 입력양식 영역 */
+        .contents { width: 460px; margin-left: auto; margin-right: auto; }
+        .contents .join_row label {
+            display: block; margin: 19px 0 8px;
+            font-size: 14px; font-weight: bold;
+        }
+        .contents .join_row .ps_box {
+            display: block;
+            width: 100%;
+            height: 51px;
+            border: 1px solid #dadada;
+            padding: 10px 14px 10px 14px;
+            background: #fff;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .contents .join_row .ps_box .int {
+            display: block;
+            position: relative;
+            width: 100%; height: 29px;
+            line-height: 29px;
+            border: none; background: #fff;
+            font-size: 15px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            z-index: 10;
+        }
+        .contents .join_row .ps_box .sel {
+            width: 100%; height: 29px;
+            font-size: 15px; line-height: 18px;
+            color: #000; border: none; border-radius: 0;
+        }
+        .contents .join_row .ps_box.int_id {
+            padding-right: 110px;
+        }
+
+        .contents .join_row .ps_box .step_url {
+            position: absolute;
+            top: 16px; right: 13px;
+            font-size: 15px; line-height: 18px; color: #8e8e8e;
+        }
+        .contents .join_row .bir_wrap { display: table; }
+        .contents .join_row .bir_yy,
+        .contents .join_row .bir_mm,
+        .contents .join_row .bir_dd { display: table-cell; width: 147px; vertical-align: middle; }
+        .contents .join_row .bir_yy+.bir_mm,
+        .contents .join_row .bir_mm+.bir_dd { padding-left: 10px; }
+        /* *********** */
+        /* 꼬릿말 영역 */
+        footer { padding: 30px 0 15px 0; }
+        footer div { margin: 0 0 9px 0; }
+        footer div, footer address { text-align: center; }
+        footer a { text-decoration: none; color: #333; }
+        footer a:hover { text-decoration: underline; color: #438A01; }
+        footer .lightgray { color: lightgray; }
+        footer address { font-style: normal; font-family: Arial,Helvetica,sans-serif; }
+    </style>
+</head>
+<body>
+    <header>
+        <div></div>
+    </header>
+    <div class="contents">
+        <section>
+            <div class="join_row">
+                <label for="yy_id">성별</label>
+                <div class="bir_wrap">
+                    <div class="bir_mm">
+                        <span class="ps_box">
+                            <select name="gender" id="gender_id" class="sel">
+                                <option>성별</option>
+                                <option value="M">남성</option>
+                                <option value="F">여자</option>
+                            </select>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div>
+            <a href="">이용약관</a>
+            <span class="lightgray">|</span>
+            <!-- strong은 의미적으로 중요하다는 것을 내포하고 있음. -->
+            <strong><a href="">개인정보처리방침</a></strong>
+            <!-- <b><a href="">개인정보처리방침</a></b> -->
+            <span class="lightgray">|</span>
+            <a href="">책임의 한계와 법적고지</a>
+            <span class="lightgray">|</span>
+            <a href="">회원정보</a>
+            <span class="lightgray">|</span>
+            <a href="">고객센터</a>
+        </div>
+        <address>
+            <em>@</em>
+            <span><a href="https://naver.com">NAVER Corp.</a></span>
+        </address>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>계산기</title>
+
+</head>
+
+<style>
+
+body{background: #333}
+
+.calc {
+    width: 422px; height: 600px; margin: auto;
+    background-color: mediumaquamarine;
+    border-radius: 100px;
+    padding-top: 27px;
+}
+
+.calc #disp {
+    width: 387px; height: 90px;
+    background-color: #c1d798;
+    border-radius: 20px;
+    margin-left: auto; margin-right: auto;
+    margin-bottom: 15px;
+    font-size: 60px;
+    text-align: right;
+    overflow: hidden;
+}
+
+.calc .btns {
+    width: 384px;
+    margin-left: auto; margin-right: auto;
+}
+
+.calc .btns a {
+    display: block;
+    width: 86px; height: 86px;
+    float: left; margin: 5px; border-radius: 50px;
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.calc #disp:hover {
+    background-color: chartreuse;
+}
+
+.calc .btns a:hover {
+    background-color: chartreuse;
+}
+
+.btn_numb { background-color: mediumslateblue; }
+.btn_sign { background-color: #bcc0c7; }
+.bg_red { background-color: red; }
+
+</style>
+
+<body>
+    <section>
+
+        <div class = "calc">
+
+            <div  id = "disp"></div>
+         
+            <div class = "btns">
+                <a class="btn_numb" onclick="add(7)">7</a>
+                <a class="btn_numb" onclick="add(8)">8</a>
+                <a class="btn_numb" onclick="add(9)">9</a>
+                <a class="btn_sign" onclick="reset()">AC</a>
+                <a class="btn_numb" onclick="add(4)">4</a>
+                <a class="btn_numb" onclick="add(5)">5</a>
+                <a class="btn_numb" onclick="add(6)">6</a>
+                <a class="btn_sign" onclick="add('/')">/</a>
+                <a class="btn_numb" onclick="add(1)">1</a>
+                <a class="btn_numb" onclick="add(2)">2</a>
+                <a class="btn_numb" onclick="add(3)">3</a>
+                <a class="btn_sign" onclick="add('*')">*</a>
+                <a class="btn_numb" onclick="add(0)">0</a>
+                <a class="btn_sign" onclick="add('.')">.</a>
+                <a class="btn_sign" onclick="add('-')">-</a>
+                <a class="btn_sign" onclick="add('+')">+</a>
+                <a class="btn_sign" onclick="calculate()">=</a>
+                <a class="btn_sign" onclick="bs()">bs</a>
+                <a class="btn_sign" onclick="add('(')">(</a>
+                <a class="btn_sign" onclick="add(')')">)</a>
+            </div>
+       
+        </div>
+        
+    </section>
+        
+<script>
+    var disp = document.getElementById('disp');
+  
+
+    function add(char){
+        disp.innerText += char;
+    }
+
+    function calculate(){
+        // disp = document.getElementById('disp');
+
+
+        try {
+            result = eval(disp.innerText);
+            }
+        catch(err) {
+            document.getElementById('disp').innerText = "구문오류발생!";
+            }
+
+        document.getElementById('disp').innerText = result;
+    }
+
+    function reset(){
+        // document.getElementById('disp').innerText = "";
+        disp.innerText = "";
+        document.getElementById('result').innerText = "";
+    }
+
+    function bs(){
+        document.getElementById('disp').innerText = disp.innerText.substring(0, disp.innerText.length-1);
+    }
+
+</script>
+
+</body>
+</html>

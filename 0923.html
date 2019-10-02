@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>반응형 메뉴바</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+
+  <style>
+   .topnav clearfix { display: inline-block; cursor: pointer; }
+
+        @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    .clearfix::after { content: ""; display: block; clear: both; }
+    .topnav { background-color: mediumaquamarine }
+    .topnav a {
+      float: left; display: block; color: black; text-align: center;
+      padding: 20px 140px; text-decoration: none; font-size: 17px;
+    }
+  
+    .topnav a:hover { background-color: gray; color: white; transform: rotate(10deg) translate(0px, 0px); }
+    
+    .topnav .icon { display: none; }
+
+    .contents { padding: 15px; }
+    .toptop{
+        text-align : center; 
+        font-size : 150px; 
+        margin : 0, 0, 150px, 0 ;
+
+    }
+
+
+    body a:hover{
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";  /* IE8 */
+    filter: alpha(opacity=30); /*IE5~7, 8~9 */
+    opacity:0.3 /*Modern Browser*/
+    }
+
+
+  </style>
+</head>
+
+
+
+<body style="background-image: url('back2.JPG'); background-repeat: no-repeat ; background-size : cover;" >
+
+    
+  <header>
+    
+    <div class="toptop"> <b style="color:green ; font-family:궁서">UI/UX </b><b style="color:mediumseagreen">homepage</b></div>
+
+    <div class="topnav clearfix" id="myTopnav">
+      <a href="0923_image.html"><i class="fas fa-home"></i> 전시회</a>
+      <a href="0923_site.html"></i><i class="fas fa-newspaper"></i> 게시판</a>
+      <a href="0923_cal.html"><i class="fas fa-address-book"></i> 계산기</a>
+      <a href="0923_time.html"><i class="fas fa-file-alt"></i> 시계</a>
+      <a href="0923_get.html"><i class="fas fa-phone"></i> 회원가입</a>
+    </div>
+  </header>
+ 
+
+
+
+
+
+
+</body>
+</html>
